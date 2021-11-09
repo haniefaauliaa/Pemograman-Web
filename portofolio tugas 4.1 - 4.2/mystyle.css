@@ -1,0 +1,42 @@
+.head{
+    height: 10cm; width:18cm; border:1px solid black;
+}
+
+.sit {
+    border:1px solid black;background-color:rgb(140, 255, 140);
+}
+
+.header {
+    padding: 10px 10px;
+}
+
+.site {
+    width: 130px;
+    font-weight: bold;
+}
+
+.cat {
+    font-size: 12px;
+}
+
+.kera {
+    text-align: right; width: 250px;
+}
+
+.us {
+    font-size:large;
+    font-weight: bold;
+}
+
+.arc {
+    font-size: medium;
+}
+
+.conten {
+    background-color:rgb(123, 230, 91); padding: 10px 10px; border-radius: 10px;
+}
+
+#con {
+    text-align: right;
+}
+
