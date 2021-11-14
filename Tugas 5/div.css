@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    border: 1px solid black;
+    width: 900px;
+    height: 500px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.column {
+    height: 400px;
+    width: 150px;
+    float: left;
+    margin: 35px;
+    border: 1px solid black;
+}
