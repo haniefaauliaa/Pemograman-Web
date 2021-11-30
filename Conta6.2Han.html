@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="praktikum 6.2.css">
+    <title>TASK 6.2</title>
+</head>
+<style>
+* {
+box-sizing: border-box;
+}
+
+nav, header, article, aside, footer{
+font-family: Times New Roman;
+color: default;
+padding: 1em;
+}
+
+body {
+display: flex;
+min-height: 100vh;
+margin:0%;
+}
+
+.satu {
+display: flex;
+flex:1;
+}
+
+.satu nav {
+background-color: lightblue;
+flex:0 0 20vw;
+order:0;
+}
+
+.dua {
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+}
+
+.dua article {
+background-color: lightyellow;
+order:0;
+flex:1;
+}
+
+.dua aside {
+background-color: palegreen;
+flex: 0 0 20vw;
+order:1;
+order:0;
+}
+
+header, footer {
+background-color: lightpink;
+height:10vw;
+}
+
+.tiga {
+display:flex;
+flex:1;
+}
+</style>
+<body>
+    <div class="satu">
+        <nav>Nav</nav>
+        <div class="dua">
+        <header>Header</header>
+        	<div class="tiga">
+        		<article>Article</article>
+        		<aside>Aside</aside>
+        	</div>
+        	<footer>Footer</footer>
+        </div>   
+    </div>
+</body>
+</html>
