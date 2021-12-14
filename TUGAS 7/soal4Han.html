@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 4</title>
+</head>
+<body>
+    <h2 style="color: steelblue; text-align: center;">Menghitung Jumlah Dua Bilangan</h2>
+    <fieldset>
+        <pre>
+        <center>
+        <input type="number" id="satu" placeholder="Masukkan Angka" onchange="count()">
+        <p>+</p>
+        <input type="number" id="dua" placeholder="Masukkan Angka" onchange="count()">
+        <p>=</p>
+        <input type="number" id="hasil" placeholder="Hasil">
+        </center>
+        </pre>
+    </fieldset>
+    <script>
+        function count(){
+            let satu = parseFloat(document.getElementById("satu").value)
+            let dua = parseFloat(document.getElementById("dua").value)
+            let hasil = satu + dua
+            document.getElementById("hasil").value = hasil
+        }
+    </script>
+</body>
+</html>

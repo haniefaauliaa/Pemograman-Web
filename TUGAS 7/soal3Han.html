@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 3</title>
+    <style>
+    .cost {
+    width: 100%;
+    background-color: whitesmoke;
+    border-collapse: collapse;
+    border-width: 2px;
+    border: black solid;
+}
+
+.cost td, table.cost th {
+    border-width: 2px;
+    padding: 3px;
+    border: black solid;
+}
+    </style>
+</head>
+<body>
+    <table class="cost">
+        <thead>
+        <tr>
+            <th>Jam Masuk</th>
+            <th>Jam Keluar</th>
+            <th>Lama Parkir</th>
+            <th>Biaya</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input type="number" placeholder="Jam Masuk" id="masuk" onchange="hitung()"></td>
+            <td><input type="number" placeholder="Jam Keluar" id="keluar" onchange="hitung()"></td>
+            <td><input type="text" placeholder="Lamanya" id="lama"></td>
+            <td><input type="text" placeholder="Biaya Parkir" id="biaya"></td>
+        </tr>
+        </tbody>
+    <table>
+    <script>
+         function hitung(){
+            let nf = new Intl.NumberFormat("in-IN")
+            let jamMasuk = document.getElementById("masuk").value
+            let jamKeluar = document.getElementById("keluar").value
+            let lama = jamKeluar - jamMasuk
+            document.getElementById("lama").value = lama + " Jam"
+            
+            if (lama == 2){
+                let cost = document.getElementById("biaya")
+                cost.value = "Rp. " + nf.format(3000)
+            }else if (lama > 2){
+                let biaya = document.getElementById("biaya")
+                biaya.value = "Rp. " + nf.format(((lama - 2)*1000) + 3000)
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
