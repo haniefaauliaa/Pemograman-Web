@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+</head>
+<style>
+    .button {
+        background-color: cornflowerblue;
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+        display: table-cell;
+        cursor: pointer;
+        float: right;
+        align-content: center;
+        margin: auto;
+    }
+
+    .message {
+        height: 50px;
+        width: 90%;
+        border-radius: 5px;
+        display: table-cell;
+    }
+
+    .container {
+        background-color: powderblue;
+        width: 600px;
+        border: 1px solid;
+        padding: 5px;
+        display: table;
+    }
+
+    .message1 {
+        width: 600px;
+        border: 1px solid;
+        margin-bottom: 5px;
+        overflow: scroll;
+        scroll-behavior: auto;
+    }
+</style>
+<body>
+    <h1 style="text-align: center; color: steelblue;">Membuat Chat Box</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+    <h6>masukkan pesan yang mau anda kirim</h6>
+    <div class="container" id="container">
+        <div class="mesagge1" id="message1"></div>
+        <form onsubmit="sendMessage()" id="chatBox">
+        <input type="text" name="message" id="message" class="message">
+        <button type="button" onclick="sendMessage()" class="button">send</button>
+        </form>
+    </div>
+    </center>
+    <script>
+        var form = document.getElementById("chatBox");
+        var received = document.getElementById("message");
+        var replied = document.getElementById("message1");
+        var chat = received.replied;
+
+        function handleForm(event) {
+            event.preventDefault();
+        } form.addEventListener("submit", handleForm);
+
+        function sendMessage() {
+            replied.innerHTML += received.value + "<br>";
+            scrollToBottom("message1");
+            form.reset();
+        }
+
+        function scrollToBottom(en) {
+            var div = document.getElementById(en);
+            div.scrollTop = div.scrollHeight - div.clientHeight;
+        }
+
+    </script>
+</body>
+</html>

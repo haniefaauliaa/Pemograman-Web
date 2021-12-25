@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilai Tukar Mata Uang Asing</title>
+</head>
+<body>
+    <input id="nilaiAwal" type="text" placeholder="Masukan Nilai">
+
+    <select id="valasPilihan" onchange="hasil()">
+        <option selected>silahkan pilih valas</option>
+        <option value="Dollar US">Dollar US</option>
+        <option value="Dollar Singapore">Dollar Singapore</option>
+        <option value="Ringgit Malaysia">Ringgit Malaysia</option>
+        <option value="Yen Jepang">Yen Jepang</option>
+        <option value="Euro"> Euro</option>
+        <option value="Riyal Arab Saudi"> Riyal Arab Saudi</option>
+    </select>
+    <input id="hasil" type="text" placeholder="Hasil">
+    <script>
+
+        function hasil() {
+            let valas = ["Dollar US", "Dollar Singapore", "Ringgit Malaysia", "Yen Jepang", "Euro", "Riyal Arab Saudi"];
+            let valasPilihan = document.getElementById("valasPilihan").value;
+            let nilaiAwal = document.getElementById("nilaiAwal").value;
+            let hasil = document.getElementById("hasil").value;
+            let nf = new Intl.NumberFormat('id-ID');
+            
+            if (valasPilihan == valas[0]) {
+                penanpungHasil = nilaiAwal * 9915;
+            } else if (valasPilihan == valas[1]) {
+                penanpungHasil = nilaiAwal * 13472;
+            } else if (valasPilihan == valas[2]) {
+                penanpungHasil = nilaiAwal * 874;
+            } else if (valasPilihan == valas[3]) {
+                penanpungHasil = nilaiAwal * 120;
+            } else if (valasPilihan == valas[4]) {
+                penanpungHasil = nilaiAwal * 15888;
+            } else if (valasPilihan == valas[5]) {
+                penanpungHasil = nilaiAwal * 3592;
+            }
+            document.getElementById("hasil").value = "Rp. " + nf.format(penanpungHasil);
+        }
+    </script>
+</body>
+</html>
