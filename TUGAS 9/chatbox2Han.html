@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 3</title>
+</head>
+<style>
+    h5{
+        color: steelblue;
+        text-align: center;
+    }
+    table {
+        width: 600px;
+        height: 300px;
+        border: black solid 1px;
+        margin: auto;
+    }
+
+    div{
+        width: 600px;
+        height: 300px;
+        border: 1px solid;
+        display: table;
+    }
+
+    input{
+        width: 80%;
+    }
+    
+    button{
+        height: 35px;
+        width: 100px;
+        display: table-cell;
+        float: right;
+        align-content: center;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <h5>Membuat Chat Box Sederhana</h5>
+    <br>
+    <table border="1">
+        <tr>
+            <td>
+                <div id="chat"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="text">
+                <button type="button" id="submit" onclick="message()">Kirim</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function message() {
+            let pesan = document.createElement("P");
+            pesan.innerHTML = String(document.getElementById("text").value);
+            document.getElementById("chat").appendChild(pesan);
+        }
+    </script>
+</body>
+</html>

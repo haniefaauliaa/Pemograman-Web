@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 2</title>
+</head>
+<style>
+    fieldset{
+        background-color: lightblue;
+        width:  30%;
+        margin: 0 auto;
+    }
+
+    table, tr{
+        border: 2px solid;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    #hasil{
+        background-color: whitesmoke;
+        border: 1px solid black;
+        color: black
+    }
+</style>
+<body>
+    <fieldset>
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+        <table>
+            <thead>
+                <tr>
+                    <td>Masukkan NIlai</td>
+                    <td>Valas</td>
+                    <td>Nilai Rupiah</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="number" id="nilaiAwal" placeholder="MasukkanNilai" onchange="hasil()">
+                    </td>
+                    <td>
+                        <select id="select" onchange="hasil()">
+                            <option disabled selected>Silakan Pilih Valas</option>
+                            <option value="usdollar">Dollar US</option>
+                            <option value="sgdollar">Dollar Singapore</option>
+                            <option value="rm">Ringgit Malaysia</option>
+                            <option value="yenjapan">Yen Jepang</option>
+                            <option value="euro">Euro</option>
+                            <option value="riyalarab">Riyal Arab Saudi</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" id="hasil" placeholder="hasil" disabled>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+    <script>
+
+        function hasil() {
+            let valas = ["usdollar", "sgdollar", "rm", "yenjapan", "euro", "riyalarab"];
+            let select = document.getElementById("select").value;
+            let nilaiAwal = document.getElementById("nilaiAwal").value;
+            let hasil = document.getElementById("hasil").value;
+            let nf = new Intl.NumberFormat('id-ID');
+
+            if (select == valas[0]) {
+                process = nilaiAwal * 9915;
+            } else if (select == valas [1]) {
+                process = nilaiAwal * 13472;
+            } else if (select == valas[2]) {
+                process = nilaiAwal * 874;
+            } else if (select == valas[3]) {
+                process = nilaiAwal * 120;
+            } else if (select == valas[4]) {
+                process = nilaiAwal * 15888;
+            } else if (select == valas[5]) {
+                process = nilaiAwal * 3592;
+            }
+            document.getElementById("hasil").value = "Rp. " + nf.format(process);
+        }
+    </script>
+</body>
+</html>

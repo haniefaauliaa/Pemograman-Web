@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 4</title>
+</head>
+<body style="background-color: lightblue;">
+    <h1 style="color: steelblue; text-align: center;">Memilih Gambar Untuk Dimunculkan</h1>
+    <p style="color: cadetblue; text-align: center;">Edisi Binatang</p>
+    <div class="container" style="align-content: center;">
+        <select name="" id="sc" onchange="process()">
+            <option selected disabled>Pilih</option>
+            <option value="wolf">Serigala</option>
+            <option value="rabbit">Kelinci</option>
+            <option value="pig">Babi</option>
+            <option value="cat">Kucing</option>
+            <option value="quokka">Tupai</option>
+            <option value="chicken">Ayam</option>
+            <option value="dog">Anjing</option>
+            <option value="fox">Rubah</option>
+        </select>
+        <br>
+        <img src="" id="img">
+    </div>
+    <script>
+        let sc = document.getElementById("sc")
+        let img = document.getElementById("img")
+        let size = document.getElementById("img").style.width = "30%"
+    function process() {
+        if (sc.value == "wolf")
+        {size
+            img.src = "./img/wolf.jpeg"
+            alert("ini gambar serigala")
+        } else if (sc.value == "rabbit") {
+            size
+            img.src = "./img/rabbit.jpeg"
+            alert("ini gambar kelinci")
+        } else if (sc.value == "pig") {
+            size
+            img.src = "./img/pig.jpeg"
+            alert("ini gambar babi")
+        } else if (sc.value == "cat") {
+            size
+            img.src = "./img/cat.jpeg"
+            alert("ini gambar kucing")
+        } else if (sc.value == "quokka") {
+            size
+            img.src = "./img/quokka.jpeg"
+            alert("ini gambar tupai")
+        } else if (sc.value == "chicken") {
+            size
+            img.src = "./img/chicken.jpeg"
+            alert("ini gambar ayam")
+        } else if (sc.value == "dog") {
+            size
+            img.src = "./img/dog.jpeg"
+            alert("ini gambar anjing")
+        } else if (sc.value == "fox") {
+            size
+            img.src = "./img/fox.jpeg"
+            alert("ini gambar rubah")
+        }
+    }
+    </script>
+</body>
+</html>
